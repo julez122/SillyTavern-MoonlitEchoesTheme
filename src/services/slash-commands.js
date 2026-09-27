@@ -1,6 +1,5 @@
 import { t } from '../../../../../i18n.js';
 import { getSettings as getExtensionSettings } from './settings-service.js';
-import { getChatDisplaySelect } from './chat-controls.js';
 
 /**
  * Initialize slash commands - only when theme is enabled.
@@ -18,7 +17,7 @@ export function initializeSlashCommands() {
 
     function switchChatStyle(styleName, styleValue) {
         try {
-            const chatDisplaySelect = getChatDisplaySelect();
+            const chatDisplaySelect = document.getElementById('chat_display');
             if (!chatDisplaySelect) {
                 return t`Chat display selector not found.`;
             }
