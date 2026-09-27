@@ -3206,6 +3206,16 @@ body.charListGrid {
     width: 0 !important;
 }
 
+/* Match persona dropdown width to the visible control row. */
+#persona_avatar_controls > label {
+    width: 87% !important;
+    margin-left: auto !important;
+}
+
+#persona-management-dropdown {
+    width: 100% !important;
+}
+
 .avatar {
     img {
         border: 1.25px solid var(--SmartThemeBodyColor) !important;
