@@ -3199,7 +3199,9 @@ body.charListGrid {
 
 /* --- Character Avatar 頭像 --- */
 
-#avatar_controls {
+/* Let both editor control columns use the space beside their portrait. */
+#avatar_controls,
+#persona_avatar_controls {
     height: auto;
     width: 0 !important;
 }
@@ -3326,15 +3328,34 @@ body:not(.charListGrid).big-avatars {
     }
 }
 
-#rm_ch_create_block {
-    .avatar {
-        img,
-        & {
+/* Share the character portrait's themed dimensions and spacing with the persona preview. */
+#rm_ch_create_block .avatar,
+#persona_avatar_block .avatar {
+    /* Size the image and its native avatar frame together. */
+    img,
+    & {
         width: calc(var(--custom-avatar) * var(--big-avatar-width-factor) * 2.5);
         height: calc(var(--custom-avatar) * var(--big-avatar-height-factor) * 2.5);
-        border-radius: 10px !important;
         margin: 10px 0;
         margin-bottom: 15px;
+    }
+}
+
+/* Non-rectangular persona modes keep equal sides and their native corner radius. */
+body:not(.big-avatars) #persona_avatar_block .avatar,
+body:not(.big-avatars) #persona_avatar_block .avatar img {
+    width: calc(var(--custom-avatar) * 2.5);
+    height: calc(var(--custom-avatar) * 2.5);
+}
+
+/* Preserve the existing character editor appearance and its other layout rules. */
+#rm_ch_create_block {
+    /* The character-only rounded frame must not override persona avatar shapes. */
+    .avatar {
+        /* Preserve the radius on both the character image and its frame. */
+        img,
+        & {
+            border-radius: 10px !important;
         }
     }
 
