@@ -5,16 +5,9 @@
     "requires": [],
     "optional": [],
     "js": "index.js",
-    "author": "Rivelle <rivelle.days@gmail.com>",
+    "author": "Julia",
     "version": "3.1.1",
     "license": "AGPL-3.0",
-    "homepage": "https://github.com/RivelleDays/SillyTavern-MoonlitEchoesTheme",
-    "auto_update": true,
-    "i18n": {
-        "zh-tw": "i18n/zh-tw.json",
-        "zh-cn": "i18n/zh-cn.json",
-        "ko-kr": "i18n/ko-kr.json",
-        "vi-vn": "i18n/vi-vn.json",
-        "th-th": "i18n/th-th.json"
+    "homepage": "https://github.com/julez122/SillyTavern-MoonlitEchoesTheme",
+    "auto_update": false
     }
-}

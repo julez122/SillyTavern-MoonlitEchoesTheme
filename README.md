@@ -1,5 +1,20 @@
 # Moonlit Echoes Theme
 
+## `julia-custom` branch changes
+
+### Branch: main 
+
+- Fixes severe mobile bug; related to my core mobile keyboard bug fix in SillyTavern's core `index.html` and `style.css` files. [⤷](https://github.com/RivelleDays/SillyTavern-MoonlitEchoesTheme/pull/33)
+
+## Branch: julia-custom
+
+- Adds style for Persona avatar display in `style.css`. [⤷](https://github.com/julez122/SillyTavern-MoonlitEchoesTheme/commit/fbe9ea1434e60c1e6c8e697f06dcd98b255a20b2), [⤷](https://github.com/julez122/SillyTavern-MoonlitEchoesTheme/commit/ee4fc88d8456f776494bae1a4251f4de2626d7c8)
+- Changed homepage and author of `manifest.json` to my own fork and deleted unnecessary i18n files.
+
+---
+
+## Original README
+
 **English** | [繁體中文](https://github.com/RivelleDays/SillyTavern-MoonlitEchoesTheme/blob/main/.github/README-zh_Hant.md)
 
 ![](https://github.com/RivelleDays/SillyTavern-MoonlitEchoesTheme/blob/main/.github/ImagePreview/visual_novel_mode.png)
