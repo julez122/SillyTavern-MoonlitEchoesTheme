@@ -15,7 +15,8 @@ import { tabMappings, themeCustomSettings } from './src/config/theme-settings.js
 import { settingsKey, getSettings as getExtensionSettings, saveSettings as saveExtensionSettings } from './src/services/settings-service.js';
 import { initializeSlashCommands } from './src/services/slash-commands.js';
 import { initExtension } from './src/bootstrap/init-extension.js';
-import { registerDomReadyHandler } from './src/bootstrap/lifecycle-hooks.js';
+import { registerDomReadyHandler, whenElementsAvailable } from './src/bootstrap/lifecycle-hooks.js';
+import { registerChatDisplaySelect } from './src/services/chat-controls.js';
 import { initControls, toggleSettingsPopout } from './src/ui/controls.js';
 import {
     configurePresetManager,
@@ -79,7 +80,9 @@ export function initExtensionUI() {
 
     loadSettingsHTML().then(() => {
         renderExtensionSettings();
-        initChatDisplaySwitcher();
+        // Hosts such as TauriTavern detach closed settings drawers from the
+        // document, so these controls may only appear once the drawer opens.
+        whenElementsAvailable(['themes', 'chat_display'], initChatDisplaySwitcher);
         initAvatarInjector();
 
         // Initialize preset manager
@@ -98,7 +101,7 @@ export function initExtensionUI() {
         addThemeVersionInfo();
 
         // Integrate with theme selector
-        integrateWithThemeSelector();
+        whenElementsAvailable(['themes'], integrateWithThemeSelector);
 
         // Add theme buttons hint
         addThemeButtonsHint();
@@ -790,12 +793,13 @@ container.appendChild(versionContainer);
  * Handle switching between different chat styles
  */
 function initChatDisplaySwitcher() {
-    const context = SillyTavern.getContext();
-    const settings = getExtensionSettings(context);
-
     const themeSelect = document.getElementById("themes");
     const chatDisplaySelect = document.getElementById("chat_display");
     if (!themeSelect || !chatDisplaySelect) return;
+
+    // Keep a session reference so slash commands keep working while the host
+    // (TauriTavern) has the settings drawer detached from the document.
+    registerChatDisplaySelect(chatDisplaySelect);
 
     // Add our custom options exactly once (regardless of theme enabled)
     function addCustomStyleOptions() {
