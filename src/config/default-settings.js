@@ -9,14 +9,14 @@ function generateDefaultSettings() {
         enabled: true,
         useOriginalAvatarImages: false,
         presets: {
-            "Moonlit Echoes - by Rivelle": {}
+            "Moonlit Echoes - by julez122": {}
         },
-        activePreset: "Moonlit Echoes - by Rivelle"
+        activePreset: "Moonlit Echoes - by julez122"
     };
 
     themeCustomSettings.forEach((setting) => {
         settings[setting.varId] = setting.default;
-        settings.presets["Moonlit Echoes - by Rivelle"][setting.varId] = setting.default;
+        settings.presets["Moonlit Echoes - by julez122"][setting.varId] = setting.default;
     });
 
     return Object.freeze(settings);
@@ -34,32 +34,32 @@ export function ensureSettingsStructure(settings) {
     }
 
     if (Object.keys(settings.presets).length === 0) {
-        settings.presets["Moonlit Echoes - by Rivelle"] = {};
+        settings.presets["Moonlit Echoes - by julez122"] = {};
 
         themeCustomSettings.forEach((setting) => {
             const { varId } = setting;
             if (settings[varId] !== undefined) {
-                settings.presets["Moonlit Echoes - by Rivelle"][varId] = settings[varId];
+                settings.presets["Moonlit Echoes - by julez122"][varId] = settings[varId];
             } else {
-                settings.presets["Moonlit Echoes - by Rivelle"][varId] = setting.default;
+                settings.presets["Moonlit Echoes - by julez122"][varId] = setting.default;
             }
         });
     }
 
     if (!settings.activePreset || !settings.presets[settings.activePreset]) {
-        const firstPreset = Object.keys(settings.presets)[0] || "Moonlit Echoes - by Rivelle";
+        const firstPreset = Object.keys(settings.presets)[0] || "Moonlit Echoes - by julez122";
         settings.activePreset = firstPreset;
     }
 
     if (settings.presets["Moonlit Echoes"]) {
-        if (!settings.presets["Moonlit Echoes - by Rivelle"]) {
-            settings.presets["Moonlit Echoes - by Rivelle"] = settings.presets["Moonlit Echoes"];
+        if (!settings.presets["Moonlit Echoes - by julez122"]) {
+            settings.presets["Moonlit Echoes - by julez122"] = settings.presets["Moonlit Echoes"];
         }
 
         delete settings.presets["Moonlit Echoes"];
 
         if (settings.activePreset === "Moonlit Echoes") {
-            settings.activePreset = "Moonlit Echoes - by Rivelle";
+            settings.activePreset = "Moonlit Echoes - by julez122";
         }
     }
 }

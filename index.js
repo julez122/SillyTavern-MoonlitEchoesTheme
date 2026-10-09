@@ -218,7 +218,7 @@ function addThumbnailTip(container) {
     // Set tip content, more concise
     tipContent.innerHTML = `
         <div style="line-height: 1.4;">
-            <span data-i18n="Please refer to the">Please refer to the</span> <a href="https://github.com/RivelleDays/SillyTavern-MoonlitEchoesTheme" target="_blank">Moonlit Echoes Theme GitHub README</a> <span data-i18n="and complete the necessary setup.">and complete the necessary setup.</span>
+            <span data-i18n="Please refer to the">Please refer to the</span> <a href="https://github.com/julez122/SillyTavern-MoonlitEchoesTheme" target="_blank">Moonlit Echoes Theme GitHub README</a> <span data-i18n="and complete the necessary setup.">and complete the necessary setup.</span>
             </div>
         </div>
     `;
@@ -741,7 +741,7 @@ function addThemeCreatorInfo(container) {
     creatorContainer.innerHTML = `
         <small id="moonlit-echoes-creator">
             <span>Created with Heartfelt Passion by</span>
-            <a href="https://github.com/RivelleDays" target="_blank" rel="noopener noreferrer">Rivelle</a><br>
+            <a href="https://github.com/julez122" target="_blank" rel="noopener noreferrer">julez122</a><br>
             <span>Dedicated to All 可愛 (Kind & Wonderful) People</span>
         </small>
     `;
@@ -774,7 +774,7 @@ versionContainer.innerHTML = `
     <small class="flex-container justifyCenter alignitemscenter">
         <span data-i18n="Moonlit Echoes Theme Version">Moonlit Echoes Theme Version</span>
         <a id="moonlit-echoes-version"
-            href="https://github.com/RivelleDays/SillyTavern-MoonlitEchoesTheme"
+            href="https://github.com/julez122/SillyTavern-MoonlitEchoesTheme"
             target="_blank"
             rel="noopener noreferrer"
             style="margin-left: 5px;">${THEME_VERSION}</a>

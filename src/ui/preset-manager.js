@@ -322,7 +322,7 @@ export function deleteCurrentPreset() {
 
             const themeSelector = document.getElementById('themes');
             if (themeSelector) {
-                const themeName = `${presetName} - by Rivelle`;
+                const themeName = `${presetName} - by julez122`;
                 for (let i = 0; i < themeSelector.options.length; i++) {
                     if (themeSelector.options[i].value === themeName) {
                         themeSelector.remove(i);
