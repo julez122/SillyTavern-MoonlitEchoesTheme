@@ -337,14 +337,25 @@ function addCollapsibleSectionStyles() {
         background-color: color-mix(in srgb, var(--SmartThemeBodyColor) 10%, transparent);
         padding: 5px 12px;
         border-bottom: 1px solid color-mix(in srgb, var(--SmartThemeBodyColor) 25%, transparent);
+        font-weight: 700;
+        font-size: 1em !important;
+        font-family: 'Noto Sans' !important;
+        letter-spacing: normal !important;
     }
 
     .moonlit-first-section-header {
         padding: 10px 12px;
+        font-weight: 700;
+        font-size: 1em !important;
+        font-family: 'Noto Sans' !important;
+        letter-spacing: normal !important;
     }
 
     .moonlit-first-section .moonlit-section-toggle h4 {
-        font-weight: 600;
+        font-weight: 700;
+        font-size: 1em !important;
+        font-family: 'Noto Sans' !important;
+        letter-spacing: normal !important;
     }
 
     .moonlit-section-toggle {
@@ -360,6 +371,13 @@ function addCollapsibleSectionStyles() {
 
     .moonlit-section.expanded .moonlit-section-toggle i {
         opacity: 1;
+    }
+
+    .moonlit-section-header > .moonlit-section-toggle > h4 {
+    font-weight: 700;
+    font-size: 1em !important;
+    font-family: 'Noto Sans' !important;
+    letter-spacing: normal !important;
     }
 
     .moonlit-section-content {

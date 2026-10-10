@@ -3878,3 +3878,7 @@ body.hushstyle {
 #ReverseProxyWarningMessage {
     color: red !important;
 }
+
+label[for=SillyTavernMoonlitEchoesTheme-enabled] {
+margin-top: 5px;
+}

@@ -127,12 +127,16 @@ overflow: hidden;
 .moonlit-preset-manager h4 {
     margin-top: 0;
     margin-bottom: 10px;
-    font-size: 1em;
+    font-size: 0.9em !important;
     opacity: 0.85;
     text-align: left;
     padding: 3px;
     padding-left: 10px !important;
     border-left: 3px solid var(--customThemeColor);
+    font-family: 'Noto Sans' !important;
+    letter-spacing: normal !important;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .moonlit-preset-selector {

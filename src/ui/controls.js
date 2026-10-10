@@ -55,7 +55,7 @@ function initializeSidebarButton() {
                 border: 1px solid color-mix(in srgb, var(--SmartThemeBodyColor) 10%, transparent);
                 border-radius: 5px;
                 overflow: hidden;
-                font-size: 0.9em !important;
+                font-size: 0.8em !important;
             }
 
             .moonlit-tip-header {

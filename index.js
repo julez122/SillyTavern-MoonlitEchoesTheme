@@ -88,9 +88,6 @@ export function initExtensionUI() {
         // Apply active preset
         applyActivePreset();
 
-        // Add creator information
-        addThemeCreatorInfo();
-
         // Add modern compact styles
         addModernCompactStyles();
 
@@ -576,9 +573,6 @@ function renderExtensionSettings() {
     // Get settings
     const settings = getExtensionSettings(context);
 
-    // Add creator
-    addThemeCreatorInfo(inlineDrawerContent);
-
     // Create enable switch
     const enabledCheckboxLabel = document.createElement('label');
     enabledCheckboxLabel.classList.add('checkbox_label');
@@ -715,41 +709,6 @@ function removeCustomChatStyles() {
 * @param {Object} settings - Current settings object
 */
 /**
- * Add theme creator information to settings panel
- * @param {HTMLElement} [container] - Optional container, uses default settings container if not provided
- */
-function addThemeCreatorInfo(container) {
-    // Check if creator info already added
-    if (document.getElementById('moonlit-echoes-creator')) return;
-
-    // If no container passed, use default settings container
-    if (!container) {
-        container = document.querySelector('.settings-container');
-    }
-
-    // Check if container exists
-    if (!container) return;
-
-    // Create creator info container
-    const creatorContainer = document.createElement('div');
-    creatorContainer.classList.add('moonlit-echoes', 'flex-container', 'flexFlowColumn');
-    creatorContainer.style.marginTop = '5px';
-    creatorContainer.style.marginBottom = '15px';
-    creatorContainer.style.textAlign = 'center';
-
-    // Set HTML content
-    creatorContainer.innerHTML = `
-        <small id="moonlit-echoes-creator">
-            <span>Created with Heartfelt Passion by</span>
-            <a href="https://github.com/julez122" target="_blank" rel="noopener noreferrer">julez122</a><br>
-            <span>Dedicated to All 可愛 (Kind & Wonderful) People</span>
-        </small>
-    `;
-
-    // Add to settings panel container
-    container.appendChild(creatorContainer);
-}
-
 
 /**
 * Add theme version information to settings panel
