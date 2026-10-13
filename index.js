@@ -394,15 +394,15 @@ function updateThemeSelector(presetName) {
 * @returns {Promise} Promise for initialization completion
 */
 function loadSettingsHTML() {
-return new Promise((resolve) => {
-    // Since all HTML is now integrated into JavaScript, no need to load from external sources
-    // Just return resolved Promise to continue the initialization flow
+    return new Promise((resolve) => {
+        // Since all HTML is now integrated into JavaScript, no need to load from external sources
+        // Just return resolved Promise to continue the initialization flow
 
-    // If any initialization operations need to be performed here, can be added here
+        // If any initialization operations need to be performed here, can be added here
 
-    // Immediately resolve Promise
-    resolve();
-});
+        // Immediately resolve Promise
+        resolve();
+    });
 }
 
 /**
@@ -510,22 +510,22 @@ function updateAllCheckboxStyles(extensionEnabled) {
 * @returns {string} Base URL for the extension
 */
 function getBaseUrl() {
-let baseUrl = '';
+    let baseUrl = '';
 
-// Try various possible path retrieval methods
-if (typeof import.meta !== 'undefined' && import.meta.url) {
-    baseUrl = new URL('.', import.meta.url).href;
-} else {
-    const currentScript = document.currentScript;
-    if (currentScript && currentScript.src) {
-        baseUrl = currentScript.src.substring(0, currentScript.src.lastIndexOf('/'));
+    // Try various possible path retrieval methods
+    if (typeof import.meta !== 'undefined' && import.meta.url) {
+        baseUrl = new URL('.', import.meta.url).href;
     } else {
-        // If above methods fail, use hardcoded path
-        baseUrl = `${window.location.origin}/scripts/extensions/third-party/${EXTENSION_ID}`;
+        const currentScript = document.currentScript;
+        if (currentScript && currentScript.src) {
+            baseUrl = currentScript.src.substring(0, currentScript.src.lastIndexOf('/'));
+        } else {
+            // If above methods fail, use hardcoded path
+            baseUrl = `${window.location.origin}/scripts/extensions/third-party/${EXTENSION_ID}`;
+        }
     }
-}
 
-return baseUrl;
+    return baseUrl;
 }
 
 /**
@@ -653,7 +653,7 @@ function renderExtensionSettings() {
     addThemeVersionInfo(inlineDrawerContent);
 
     // Initialize drawer toggle functionality
-    inlineDrawerToggle.addEventListener('click', function() {
+    inlineDrawerToggle.addEventListener('click', function () {
         this.classList.toggle('open');
         inlineDrawerIcon.classList.toggle('down');
         inlineDrawerIcon.classList.toggle('up');
@@ -715,21 +715,21 @@ function removeCustomChatStyles() {
 * @param {HTMLElement} container - Container to add version info
 */
 function addThemeVersionInfo(container) {
-// Check if version info already added
-if (document.getElementById('moonlit-echoes-version')) return;
+    // Check if version info already added
+    if (document.getElementById('moonlit-echoes-version')) return;
 
-// Check if container exists
-if (!container) return;
+    // Check if container exists
+    if (!container) return;
 
-// Create version info container
-const versionContainer = document.createElement('div');
-versionContainer.classList.add('moonlit-echoes', 'flex-container', 'flexFlowColumn');
-versionContainer.style.marginTop = '5px';
-versionContainer.style.marginBottom = '15px';
-versionContainer.style.textAlign = 'center';
+    // Create version info container
+    const versionContainer = document.createElement('div');
+    versionContainer.classList.add('moonlit-echoes', 'flex-container', 'flexFlowColumn');
+    versionContainer.style.marginTop = '5px';
+    versionContainer.style.marginBottom = '15px';
+    versionContainer.style.textAlign = 'center';
 
-// Set HTML content
-versionContainer.innerHTML = `
+    // Set HTML content
+    versionContainer.innerHTML = `
     <small class="flex-container justifyCenter alignitemscenter">
         <span data-i18n="Moonlit Echoes Theme Version">Moonlit Echoes Theme Version</span>
         <a id="moonlit-echoes-version"
@@ -740,8 +740,8 @@ versionContainer.innerHTML = `
     </small>
 `;
 
-// Add to provided container
-container.appendChild(versionContainer);
+    // Add to provided container
+    container.appendChild(versionContainer);
 }
 
 /**
@@ -782,9 +782,9 @@ function initChatDisplaySwitcher() {
     // Apply the selected chat style by toggling body classes
     function applyChatDisplayStyle() {
         document.body.classList.remove(
-            "flatchat","bubblechat","documentstyle",
-            "echostyle","whisperstyle","hushstyle",
-            "ripplestyle","tidestyle"
+            "flatchat", "bubblechat", "documentstyle",
+            "echostyle", "whisperstyle", "hushstyle",
+            "ripplestyle", "tidestyle"
         );
 
         switch (chatDisplaySelect.value) {
@@ -811,12 +811,12 @@ function initChatDisplaySwitcher() {
     if (savedChatStyle) chatDisplaySelect.value = savedChatStyle;
 
     // Events
-    themeSelect.addEventListener("change", function() {
+    themeSelect.addEventListener("change", function () {
         localStorage.setItem("savedTheme", themeSelect.value);
         applyChatDisplayStyle();
     });
 
-    chatDisplaySelect.addEventListener("change", function() {
+    chatDisplaySelect.addEventListener("change", function () {
         localStorage.setItem("savedChatStyle", chatDisplaySelect.value);
         applyChatDisplayStyle();
     });
@@ -949,7 +949,7 @@ function setupPublicMoonlitApi() {
     window.initializeThemeColorOnDemand = initializeThemeColorOnDemand;
 
     window.MoonlitEchoesTheme = {
-        init: function() {
+        init: function () {
             applyAllThemeSettings();
             initializeThemeColorOnDemand();
             syncMoonlitPresetsWithThemeList();
@@ -959,22 +959,22 @@ function setupPublicMoonlitApi() {
 
         applySetting: applyThemeSetting,
 
-        getSettings: function() {
+        getSettings: function () {
             return getExtensionSettings();
         },
 
-        getSettingsConfig: function() {
+        getSettingsConfig: function () {
             return [...themeCustomSettings];
         },
 
         presets: {
-            getAll: function() {
+            getAll: function () {
                 const context = SillyTavern.getContext();
                 const settings = getExtensionSettings(context);
                 return settings?.presets || {};
             },
 
-            getActive: function() {
+            getActive: function () {
                 const context = SillyTavern.getContext();
                 const settings = getExtensionSettings(context);
                 return {
@@ -983,7 +983,7 @@ function setupPublicMoonlitApi() {
                 };
             },
 
-            create: function(name, settingsObj) {
+            create: function (name, settingsObj) {
                 const context = SillyTavern.getContext();
                 const settings = getExtensionSettings(context);
 
@@ -998,11 +998,11 @@ function setupPublicMoonlitApi() {
                 return true;
             },
 
-            load: function(name) {
+            load: function (name) {
                 return loadPreset(name);
             },
 
-            update: function(name, settingsObj) {
+            update: function (name, settingsObj) {
                 const context = SillyTavern.getContext();
                 const settings = getExtensionSettings(context);
 
@@ -1016,7 +1016,7 @@ function setupPublicMoonlitApi() {
                 return true;
             },
 
-            delete: function(name) {
+            delete: function (name) {
                 const context = SillyTavern.getContext();
                 const settings = getExtensionSettings(context);
 
@@ -1044,7 +1044,7 @@ function setupPublicMoonlitApi() {
                 return true;
             },
 
-            export: function(name) {
+            export: function (name) {
                 const context = SillyTavern.getContext();
                 const settings = getExtensionSettings(context);
 
@@ -1060,7 +1060,7 @@ function setupPublicMoonlitApi() {
                 };
             },
 
-            import: function(jsonData) {
+            import: function (jsonData) {
                 if (!jsonData || !jsonData.moonlitEchoesPreset || !jsonData.presetName || !jsonData.settings) {
                     return false;
                 }

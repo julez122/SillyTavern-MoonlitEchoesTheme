@@ -5,7 +5,7 @@ const defaultTranslate = (strings, ...values) => strings.reduce((result, part, i
     return result + part + value;
 }, '');
 
-const noop = () => {};
+const noop = () => { };
 
 let managerConfig = {
     settingsKey: '',
@@ -148,7 +148,7 @@ function handlePresetFileSelected(event) {
     if (!file) return;
 
     const reader = new FileReader();
-    reader.onload = function(e) {
+    reader.onload = function (e) {
         try {
             const jsonData = JSON.parse(e.target.result);
 

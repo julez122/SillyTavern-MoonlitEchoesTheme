@@ -1,6 +1,6 @@
 {
     "display_name": "Moonlit Echoes Theme",
-    "description": "A modern, minimalist, and elegant theme for SillyTavern. Inspired by moonlit nights and gentle echoes of serenity.",
+    "description": "A modern, minimalist, and elegant theme for SillyTavern.",
     "loading_order": 10,
     "requires": [],
     "optional": [],
@@ -10,4 +10,4 @@
     "license": "AGPL-3.0",
     "homepage": "https://github.com/julez122/SillyTavern-MoonlitEchoesTheme",
     "auto_update": false
-    }
+}

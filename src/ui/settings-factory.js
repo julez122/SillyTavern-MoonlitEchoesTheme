@@ -7,12 +7,12 @@ import { rgbaToHex, getAlphaFromRgba } from '../utils/color.js';
 const SETTINGS_STYLES_ID = 'moonlit-modern-styles';
 const SETTINGS_STYLES_URL = new URL('./settings-factory.css', import.meta.url).href;
 
-let applyThemeSettingFn = () => {};
-let applyRawCustomCssFn = () => {};
+let applyThemeSettingFn = () => { };
+let applyRawCustomCssFn = () => { };
 
 export function configureSettingsFactory(options = {}) {
-    applyThemeSettingFn = options.applyThemeSetting || (() => {});
-    applyRawCustomCssFn = options.applyRawCustomCss || (() => {});
+    applyThemeSettingFn = options.applyThemeSetting || (() => { });
+    applyRawCustomCssFn = options.applyRawCustomCss || (() => { });
 }
 
 export function addModernCompactStyles() {
@@ -128,10 +128,10 @@ export function createSettingItem(container, setting, settings) {
     }
 
     switch (setting.type) {
-        case 'color':    createColorPicker(settingContainer, setting, settings); break;
-        case 'slider':   createSlider(settingContainer, setting, settings); break;
-        case 'select':   createSelect(settingContainer, setting, settings); break;
-        case 'text':     createTextInput(settingContainer, setting, settings); break;
+        case 'color': createColorPicker(settingContainer, setting, settings); break;
+        case 'slider': createSlider(settingContainer, setting, settings); break;
+        case 'select': createSelect(settingContainer, setting, settings); break;
+        case 'text': createTextInput(settingContainer, setting, settings); break;
         case 'checkbox': createCheckbox(settingContainer, setting, settings); break;
         case 'textarea': createTextareaInput(settingContainer, setting, settings); break;
         default:

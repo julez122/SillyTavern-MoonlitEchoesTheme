@@ -279,13 +279,13 @@ export const themeCustomSettings = [
         `
     },
     {
-    "type": "checkbox",
-    "varId": "disableTopMenuAnimation",
-    "displayText": t`Disable Top Menu Animations`,
-    "default": false,
-    "category": "theme-extras",
-    "description": t`Disable top menu animation effects for a smoother experience on mobile devices`,
-    "cssBlock": `
+        "type": "checkbox",
+        "varId": "disableTopMenuAnimation",
+        "displayText": t`Disable Top Menu Animations`,
+        "default": false,
+        "category": "theme-extras",
+        "description": t`Disable top menu animation effects for a smoother experience on mobile devices`,
+        "cssBlock": `
         .drawer-content,
         .fillLeft,
         .fillRight {
@@ -297,13 +297,13 @@ export const themeCustomSettings = [
     `
     },
     {
-    "type": "checkbox",
-    "varId": "forceFixedMenuHeight",
-    "displayText": t`Lock AI Response & Character Menu Height`,
-    "default": true,
-    "category": "theme-extras",
-    "description": t`Fix AI config & character menus' height to avoid display issues. Disable if using MovingUI`,
-    "cssBlock": `
+        "type": "checkbox",
+        "varId": "forceFixedMenuHeight",
+        "displayText": t`Lock AI Response & Character Menu Height`,
+        "default": true,
+        "category": "theme-extras",
+        "description": t`Fix AI config & character menus' height to avoid display issues. Disable if using MovingUI`,
+        "cssBlock": `
             /* Force Fixed Menu Height */
             .fillLeft,
             .fillRight,
@@ -456,13 +456,13 @@ export const themeCustomSettings = [
         "description": t`Applies a transparent gradient effect to the top and bottom of the chat field (#chat)`
     },
     {
-    "type": "checkbox",
-    "varId": "showLLMReasoningIcon",
-    "displayText": t`Display LLM Icon in Reasoning Block`,
-    "default": false,
-    "category": "chat-general",
-    "description": t`Shows the LLM icon in the reasoning block header for clearer identification`,
-    "cssBlock": `
+        "type": "checkbox",
+        "varId": "showLLMReasoningIcon",
+        "displayText": t`Display LLM Icon in Reasoning Block`,
+        "default": false,
+        "category": "chat-general",
+        "description": t`Shows the LLM icon in the reasoning block header for clearer identification`,
+        "cssBlock": `
             .mes_reasoning_header > .icon-svg {
                 display: block;
                 opacity: 1 !important;
@@ -594,21 +594,21 @@ export const themeCustomSettings = [
         "description": t`Controls the animation speed for message details appearing/disappearing (e.g. 0.5s, 1.2s)`
     },
     {
-    "type": "text",
-    "varId": "favoriteSymbol",
-    "displayText": t`Favorite Symbol`,
-    "default": "\"♥︎\"",
-    "category": "chat-general",
-    "description": t`Sets the symbol displayed before a favorite character in the character management menu`
+        "type": "text",
+        "varId": "favoriteSymbol",
+        "displayText": t`Favorite Symbol`,
+        "default": "\"♥︎\"",
+        "category": "chat-general",
+        "description": t`Sets the symbol displayed before a favorite character in the character management menu`
     },
     {
-    "type": "checkbox",
-    "varId": "favoriteSymbolAnimation",
-    "displayText": t`Favorite Symbol Animation`,
-    "default": true,
-    "category": "chat-general",
-    "description": t`Enables the pulsing animation effect for the favorite symbol before character names`,
-    "cssBlock": `
+        "type": "checkbox",
+        "varId": "favoriteSymbolAnimation",
+        "displayText": t`Favorite Symbol Animation`,
+        "default": true,
+        "category": "chat-general",
+        "description": t`Enables the pulsing animation effect for the favorite symbol before character names`,
+        "cssBlock": `
         .character_select.is_fav .ch_name::before,
         .group_select.is_fav .ch_name::before,
         .group_member.is_fav .ch_name::before {
@@ -827,7 +827,7 @@ export const themeCustomSettings = [
         "default": true,
         "category": "mobile-global-settings",
         "description": t`Hides scrollbars for a clean mobile interface`,
-        "cssBlock":  `
+        "cssBlock": `
             /* Mobile Hidden Scrollbar */
             @media screen and (max-width: 1000px) {
                 * {
@@ -854,7 +854,7 @@ export const themeCustomSettings = [
         "default": true,
         "category": "mobile-global-settings",
         "description": t`A message input field designed for mobile, providing a wider input box`,
-        "cssBlock":  `
+        "cssBlock": `
             /* Mobile Input Field */
             @media screen and (max-width: 1000px) {
                 #form_sheld {}
@@ -943,13 +943,13 @@ export const themeCustomSettings = [
     `
     },
     {
-    "type": "checkbox",
-    "varId": "inlineMobileMeta",
-    "displayText": t`Inline Character, Timestamp & Icons on Mobile`,
-    "default": false,
-    "category": "mobile-global-settings",
-    "description": t`Show character names, timestamps, and model icons in one line on mobile`,
-    "cssBlock": `
+        "type": "checkbox",
+        "varId": "inlineMobileMeta",
+        "displayText": t`Inline Character, Timestamp & Icons on Mobile`,
+        "default": false,
+        "category": "mobile-global-settings",
+        "description": t`Show character names, timestamps, and model icons in one line on mobile`,
+        "cssBlock": `
         @media (max-width: 1000px) {
             body:not(.echostyle) .name_text {
                 width: unset !important;
@@ -1076,7 +1076,7 @@ export const themeCustomSettings = [
         "default": false,
         "category": "mobile-detailed-settings",
         "description": t`Allows horizontal scrolling for the quick character selection menu (#HotSwapWrapper) on mobile`,
-        "cssBlock":  `
+        "cssBlock": `
             @media screen and (max-width: 1000px) {
                 body.big-avatars #HotSwapWrapper .hotswap.avatars_inline {
                     max-height: unset;

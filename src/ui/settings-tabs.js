@@ -8,7 +8,7 @@ const defaultTranslate = (strings, ...values) => strings.reduce((result, part, i
     return result + part + value;
 }, '');
 
-const noop = () => {};
+const noop = () => { };
 
 let tabsConfig = {
     t: defaultTranslate,

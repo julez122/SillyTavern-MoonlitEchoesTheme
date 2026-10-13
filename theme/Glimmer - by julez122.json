@@ -29,7 +29,7 @@
     "enableZenSliders": false,
     "enableLabMode": false,
     "hotswap_enabled": true,
-    "custom_css": "/* - - - - - - - - - - - - - - - - -\n\n    \"Moonlit Echoes\" 月下回聲\n    ₊*.⊹ ⁎✧‧₊˚\n\n    微 光\n    Glimmer (a.k.a. Personalityless Black)\n\n    Presented by julez122,\n    dedicated to all the lovely souls.\n\n    GitHub: https://github.com/julez122/SillyTavern-MoonlitEchoesTheme\n\n   - - - - - - - - - - - - - - - - - */",
+    "custom_css": "/* - - - - - - - - - - - - - - - - -\n\n    \"Moonlit Echoes\" 月下回聲\n    ₊*.⊹ ⁎✧‧₊˚\n\n    微 光\n    Glimmer\n\n    Presented by julez122.\n\n    GitHub: https://github.com/julez122/SillyTavern-MoonlitEchoesTheme\n\n   - - - - - - - - - - - - - - - - - */",
     "bogus_folders": true,
     "zoomed_avatar_magnification": false,
     "reduced_motion": false,
