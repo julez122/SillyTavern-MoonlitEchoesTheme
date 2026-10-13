@@ -189,7 +189,6 @@ h3 {
   padding-left: 10px;
   letter-spacing: 1px;
   border: 0;
-  border-left: 3.5px solid var(--customThemeColor);
 }
 .drawer-content h3 {
   white-space: nowrap;
@@ -474,7 +473,6 @@ input[type="range"] {
     h3 {
       margin: unset;
       padding-left: 10px !important;
-      border-left: 3.5px solid var(--customThemeColor) !important;
     }
   }
 

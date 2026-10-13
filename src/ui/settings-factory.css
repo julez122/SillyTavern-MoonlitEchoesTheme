@@ -138,7 +138,6 @@ input[type="number"].moonlit-neo-range-input {
   text-align: left;
   padding: 3px;
   padding-left: 10px !important;
-  border-left: 3px solid var(--customThemeColor);
   font-family: "Noto Sans" !important;
   letter-spacing: normal !important;
   text-decoration: underline;
