@@ -529,8 +529,8 @@ input[type="range"] {
 /* --- Menu Buttons 選單按鈕 --- */
 
 .menu_button {
-  min-width: 30px;
-  min-height: 30px;
+  min-width: 25px;
+  min-height: 25px;
 }
 .popup-controls {
   .menu_button {
