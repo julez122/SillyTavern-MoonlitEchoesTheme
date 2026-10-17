@@ -538,6 +538,11 @@ input[type="range"] {
       color-mix(in srgb, var(--SmartThemeBodyColor) 25%, transparent) !important;
   }
 }
+
+.menu_button::before {
+    font-size: 12px !important;
+}
+
 .paginationjs-nav {
   letter-spacing: 1px;
 }
@@ -615,7 +620,7 @@ input[type="range"] {
 }
 .text_pole {
   background-color: var(--black30a);
-  min-height: 30px;
+  min-height: 25px;
   padding-left: 10px;
   padding-right: 10px;
 }
