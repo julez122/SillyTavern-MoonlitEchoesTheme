@@ -539,7 +539,8 @@ input[type="range"] {
   }
 }
 
-.menu_button::before {
+.menu_button::before,
+.menu_button_icon > i {
     font-size: 12px !important;
 }
 
@@ -3561,6 +3562,11 @@ body:not(.big-avatars) #persona_avatar_block .avatar img {
   min-width: 30px;
   min-height: 30px;
 }
+
+.buttons_block .menu_button::before {
+    font-size: 14px !important;
+}
+
 #result_info .right_menu_button {
   font-size: unset !important;
 }
