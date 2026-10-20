@@ -412,7 +412,9 @@ export const themeCustomSettings = [
         "category": "theme-extras",
         "description": t`Make the top fields in Worlds/Lorebooks more compact by reducing header padding and entry spacing`,
         "cssBlock": `
-            .world_entry .inline-drawer-header {
+            /* Keep compact spacing scoped to the two lorebook entry headers. */
+            .world_entry .wi-entry-header,
+            .world_entry .wi-entry-sources-header {
                 padding: 2px 10px;
             }
             .wi-card-entry {

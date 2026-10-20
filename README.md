@@ -13,6 +13,7 @@
 - Replaced Rivelle branding, preset names, and repository links with julez122 across the extension and bundled themes. Bump the theme version from 3.1.1 to 3.2.0. [⤷](https://github.com/julez122/SillyTavern-MoonlitEchoesTheme/commit/7254400047b7adc8368dc3824821c30dba15b61c)
 - Removed the creator banner and improved the styling of the preset manager in the extensions inline-drawer. [⤷](https://github.com/julez122/SillyTavern-MoonlitEchoesTheme/commit/6676d9f20a9b02d4e0b1166dc385721d77d7f2fb)
 - Gave the buttons and input fields a lower `min-height` and `min-width` because they take up too much space on mobile. Resized their `::before` icons to match the new sizing.
+- Adds support for the changed "World Info Lorebook Entry" selectors of my custom SillyTavern fork.
 
 ---
 

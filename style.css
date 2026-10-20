@@ -2868,7 +2868,9 @@ body.waifuMode {
 
 /* World Header 條目標題 */
 .world_entry {
-  .inline-drawer-header {
+  /* Target the entry editor's dedicated headers without styling unrelated drawers. */
+  .wi-entry-header,
+  .wi-entry-sources-header {
     cursor: initial;
     margin: 0;
     padding: 5px 10px;
@@ -2883,6 +2885,18 @@ body.waifuMode {
   }
 }
 /* World Content 條目內容 */
+@media screen and (max-width: 1000px) {
+  /* Let the mobile lorebook editor reclaim generic inline-drawer padding. */
+  .world_entry .wi-entry-body {
+    padding: 6px 2px !important;
+  }
+
+  /* The source list owns its own spacing inside this specific drawer. */
+  .world_entry .wi-entry-sources-content {
+    padding: 0 !important;
+  }
+}
+
 .wi-card-entry {
   border: 1px solid transparent;
   border-radius: 10px;
