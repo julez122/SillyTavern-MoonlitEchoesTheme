@@ -2892,9 +2892,9 @@ body.waifuMode {
   }
 
   /* The source list owns its own spacing inside this specific drawer. */
-  .world_entry .wi-entry-sources-content {
-    padding: 0 !important;
-  }
+  /* .world_entry .wi-entry-sources-content {
+    /* padding: 0 !important;
+  } */
 }
 
 .wi-card-entry {
