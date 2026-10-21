@@ -2850,7 +2850,7 @@ body.waifuMode {
     min-height: 44px;
 
     @media screen and (max-width: 1000px) {
-      min-height: 40px;
+      min-height: 30px;
     }
   }
 
