@@ -486,7 +486,7 @@ input[type="range"] {
 /* Expand Title 展開標題 */
 .inline-drawer-header {
   margin: 5px 0;
-  padding: 10px;
+  padding: 8px 15px;
   border-radius: 10px;
   font-weight: 500;
   transition: all 0.5s ease;
