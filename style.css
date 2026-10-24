@@ -3345,8 +3345,7 @@ body.big-avatars #HotSwapWrapper .hotswap.avatars_inline {
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: rgba(170, 170, 170, 0.15);
-    filter: brightness(1.25);
+    background-color: rgb(31 31 31);
   }
 }
 body.charListGrid {
@@ -3411,7 +3410,7 @@ body.charListGrid #rm_print_characters_block .group_select {
 #rm_print_characters_block {
   .flex-container {
     gap: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   body.charListGrid & {
