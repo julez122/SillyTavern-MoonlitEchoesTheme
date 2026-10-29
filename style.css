@@ -453,7 +453,7 @@ input[type="range"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5em 0.5em !important;
+    padding: 1.8em 0.5em !important;
     border: 0 !important;
     border-radius: 0 !important;
   }
