@@ -2419,7 +2419,7 @@ body.bubblechat,
 body.documentstyle,
 body.ripplestyle {
   .mesIDDisplay {
-    background: var(--customBgColor2) !important;
+    background: var(--SmartThemeBorderColor) !important;
     width: fit-content;
     padding: 0 8px;
     border-radius: 8px;
@@ -3866,8 +3866,8 @@ body.whisperstyle #chat {
 
 /* 滑動訊息左側按鈕修正 */
 .swipes-counter {
-  margin-right: 10px;
-  margin-bottom: 2px;
+  margin-right: 0px;
+  margin-bottom: 0px;
 }
 #chat {
   .swipe_left {
