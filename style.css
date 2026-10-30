@@ -1037,7 +1037,7 @@ body.movingUI ::-webkit-scrollbar-thumb:vertical {
       }
 
       @media screen and (max-width: 1000px) {
-        font-size: calc(var(--mainFontSize) * 1.2);
+        font-size: calc(var(--mainFontSize) * 1.1);
       }
     }
     .extraMesButtons {
