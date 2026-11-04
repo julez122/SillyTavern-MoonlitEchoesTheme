@@ -741,6 +741,20 @@ body.movingUI ::-webkit-scrollbar-thumb:vertical {
   background-color: transparent;
 }
 
+/* Scrollbar for desktop */
+@media (hover: hover) and (pointer: fine) {
+	* {
+    scrollbar-width: thin;
+    scrollbar-color: #852e54 transparent;
+  }
+}
+
+/* Scrollbar for all devices */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #852e54 transparent;
+}
+
 /* IMPORTANT SETTINGS 重要選單與內容設定
 - - - - - - - - - - - - - - - - - */
 
