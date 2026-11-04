@@ -365,8 +365,8 @@ input[type="checkbox"] {
 @media screen and (max-width: 1000px) {
   input[type="checkbox"],
   input[type="radio"] {
-      width: 14px;
-      height: 14px;
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -549,7 +549,7 @@ input[type="range"] {
 
 .menu_button::before,
 .menu_button_icon > i {
-    font-size: 12px !important;
+  font-size: 12px !important;
 }
 
 .paginationjs-nav {
@@ -743,7 +743,7 @@ body.movingUI ::-webkit-scrollbar-thumb:vertical {
 
 /* Scrollbar for desktop */
 @media (hover: hover) and (pointer: fine) {
-	* {
+  * {
     scrollbar-width: thin;
     scrollbar-color: #852e54 transparent;
   }
@@ -3600,7 +3600,7 @@ body:not(.big-avatars) #persona_avatar_block .avatar img {
 }
 
 .buttons_block .menu_button::before {
-    font-size: 14px !important;
+  font-size: 14px !important;
 }
 
 #result_info .right_menu_button {
