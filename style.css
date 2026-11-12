@@ -617,9 +617,18 @@ input[type="range"] {
 .menu_button:not(.disabled).active {
   background: color-mix(
     in srgb,
-    var(--SmartThemeBodyColor) 25%,
+    var(--SmartThemeBodyColor) 15%,
     transparent
   ) !important;
+  box-shadow:
+    0 0 5px var(--SmartThemeBodyColor),
+    0 0 2px var(--SmartThemeBodyColor),
+    0 0 3px var(--SmartThemeBorderColor),
+    0 0 2px var(--SmartThemeBorderColor),
+    0 0 5px var(--SmartThemeBorderColor),
+    0 0 5px var(--SmartThemeBorderColor),
+    0 0 5px var(--SmartThemeBorderColor),
+    0 0 3px var(--SmartThemeBorderColor);
 }
 .popup-controls {
   .menu_button {
@@ -638,10 +647,25 @@ input[type="range"] {
 
     &:hover {
       border: 1px solid
-        color-mix(in srgb, var(--SmartThemeBodyColor) 25%, transparent) !important;
+        color-mix(in srgb, var(--SmartThemeBodyColor) 15%, transparent) !important;
+      background: color-mix(
+        in srgb,
+        var(--SmartThemeBodyColor) 15%,
+        transparent
+      ) !important;
+      box-shadow:
+        0 0 5px var(--SmartThemeBodyColor),
+        0 0 2px var(--SmartThemeBodyColor),
+        0 0 3px var(--SmartThemeBorderColor),
+        0 0 2px var(--SmartThemeBorderColor),
+        0 0 5px var(--SmartThemeBorderColor),
+        0 0 5px var(--SmartThemeBorderColor),
+        0 0 5px var(--SmartThemeBorderColor),
+        0 0 3px var(--SmartThemeBorderColor);
     }
   }
 }
+
 .text_pole {
   background-color: var(--black30a);
   min-height: 25px;
