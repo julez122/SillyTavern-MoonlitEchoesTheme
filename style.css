@@ -272,10 +272,8 @@ select:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:hover,
-input:hover,
 textarea:hover,
 select:active,
-input:active,
 textarea:active {
   outline: 1px solid var(--SmartThemeBodyColor);
   box-shadow:
