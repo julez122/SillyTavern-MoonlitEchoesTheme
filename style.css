@@ -270,8 +270,23 @@ code {
 /* --- Input Fields 輸入框樣式 --- */
 select:focus-visible,
 input:focus-visible,
-textarea:focus-visible {
-  outline: 0px solid var(--customThemeColor);
+textarea:focus-visible,
+select:hover,
+input:hover,
+textarea:hover,
+select:active,
+input:active,
+textarea:active {
+  outline: 1px solid var(--SmartThemeBodyColor);
+  box-shadow:
+    0 0 5px var(--SmartThemeBodyColor),
+    0 0 5px var(--SmartThemeBodyColor),
+    0 0 3px var(--SmartThemeBodyColor),
+    0 0 5px var(--SmartThemeBodyColor),
+    0 0 0px var(--SmartThemeBodyColor),
+    0 0 0px var(--SmartThemeBodyColor),
+    0 0 0px var(--SmartThemeBodyColor),
+    0 0 3px var(--SmartThemeBodyColor);
 }
 .select2-dropdown {
   background-color: var(--SmartThemeBlurTintColor);
