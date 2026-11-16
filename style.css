@@ -565,6 +565,10 @@ input[type="range"] {
   font-size: 12px !important;
 }
 
+.menu_button_icon span {
+  font-size: 12px !important;
+}
+
 .paginationjs-nav {
   letter-spacing: 1px;
 }
