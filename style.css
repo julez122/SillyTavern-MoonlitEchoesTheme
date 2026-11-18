@@ -1184,6 +1184,7 @@ body.movingUI ::-webkit-scrollbar-thumb:vertical {
       transform: scale(0.8);
       transition: all 0.5s ease;
       gap: 5px;
+      align-content: center;
 
       &:hover {
         opacity: 0.8;
@@ -1201,7 +1202,7 @@ body.movingUI ::-webkit-scrollbar-thumb:vertical {
 
     /* Swipe Message Counter 滑動訊息計數器 */
     .swipes-counter {
-      width: 60px;
+      width: 65px;
       text-align: center;
       overflow: visible;
       white-space: nowrap;
@@ -2187,7 +2188,7 @@ body.ripplestyle #chat {
   .last_mes {
     .swipeRightBlock,
     .swipe_left {
-      bottom: 10px !important;
+      bottom: 6px !important;
     }
   }
 
@@ -2537,7 +2538,7 @@ body.ripplestyle {
       color-mix(in srgb, var(--SmartThemeBlurTintColor) 50%, transparent);
     border: 0 !important;
     border-top: 1px solid
-      color-mix(in srgb, var(--SmartThemeBodyColor) 50%, transparent) !important;
+      color-mix(in srgb, var(--SmartThemeBodyColor) 65%, transparent) !important;
 
     &:visited,
     &:focus,

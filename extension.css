@@ -411,7 +411,7 @@ body.bubblechat .promeChatHistoryList {
 
 @media screen and (max-width: 1000px) {
   #quickPersona {
-    margin: 0 calc(var(--bottomFormBlockSize) / 4) !important;
+    margin: 0 calc(var(--bottomFormBlockSize) / 8) !important;
   }
 }
 
@@ -427,6 +427,7 @@ body.bubblechat .promeChatHistoryList {
     transition: all 0.5s ease;
     background-color: unset !important;
     opacity: 1;
+    margin-bottom: 5px;
   }
 
   ul {
