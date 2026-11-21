@@ -3468,7 +3468,7 @@ body.charListGrid {
 body.charListGrid #rm_print_characters_block .bogus_folder_select,
 body.charListGrid #rm_print_characters_block .character_select,
 body.charListGrid #rm_print_characters_block .group_select {
-  max-width: 110px;
+  max-width: 103px;
 }
 
 #rm_print_characters_block {
@@ -3479,14 +3479,15 @@ body.charListGrid #rm_print_characters_block .group_select {
 
   body.charListGrid & {
     .flex-container {
-      gap: 5px;
-      padding: 5px 10px;
+      gap: 3px;
+      padding: 5px 0px;
+      margin-bottom: 8px;
     }
     .avatar {
-      transform: scale(1.5);
+      transform: scale(1.25);
       transform-origin: center center;
-      margin: 25px 0;
-      margin-bottom: 20px;
+      margin: 10px 0;
+      margin-bottom: 9px;
     }
     .avatar.avatar_collage img {
       border: 0 !important;
@@ -3749,6 +3750,11 @@ body:not(.big-avatars) #persona_avatar_block .avatar img {
   h3 {
     min-width: unset !important;
   }
+}
+
+.tags_inline .tag {
+  font-size: calc(var(--mainFontSize) - 18%) !important;
+  padding: 2px 6px !important;
 }
 
 /* --- Folders 資料夾 --- */
