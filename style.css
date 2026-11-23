@@ -3442,7 +3442,7 @@ body.charListGrid {
 
 /* Match persona dropdown width to the visible control row. */
 #persona_avatar_controls > label {
-  width: 87% !important;
+  width: 90% !important;
   margin-left: auto !important;
 }
 
