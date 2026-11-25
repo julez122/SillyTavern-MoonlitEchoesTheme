@@ -856,11 +856,11 @@ body.stcs--nonDiscord .stcs--ctxBlocker > .stcs--ctxMenu {
 .stwii--panel {
   box-shadow: 0 0 25px
     color-mix(in srgb, var(--SmartThemeBlurTintColor) 80%, transparent);
-  border: 1px solid var(--SmartThemeBorderColor);
+  border: 1px solid rgba(220, 252, 231, 0.17);
   margin-bottom: -10px !important;
   max-width: 80dvw !important;
   max-height: 70dvh !important;
-  backdrop-filter: blur(calc(var(--SmartThemeBlurStrength)));
+  backdrop-filter: blur(5px);
 
   @media screen and (max-width: 1000px) {
     top: var(--topBarBlockSize);

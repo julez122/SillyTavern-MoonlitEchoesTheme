@@ -1021,7 +1021,7 @@ body.movingUI ::-webkit-scrollbar-thumb:vertical {
   /* --- Reasoning 推理 ---  */
   .mes_reasoning_summary {
     background: none !important;
-    margin: 0.5em 0px;
+    margin: 0.5em 0px 0px;
 
     &:hover {
       background: none !important;
@@ -1031,30 +1031,44 @@ body.movingUI ::-webkit-scrollbar-thumb:vertical {
     background: none !important;
   }
   .mes_reasoning_header {
-    padding: 8px;
+    padding: 6px 8px;
     padding-right: calc(0.7em + 18px);
     background: color-mix(in srgb, var(--SmartThemeBodyColor) 10%, transparent);
     transition: all 0.5s ease;
     margin-bottom: 0;
+    border: 1px solid var(--SmartThemeBorderColor);
+    font-size: 12px;
+    margin: 0.5em 0 0;
+    color: color-mix(in srgb, var(--SmartThemeBodyColor) 50%, transparent);
 
     &:hover {
       background: color-mix(
         in srgb,
-        var(--SmartThemeBodyColor) 20%,
+        var(--SmartThemeBodyColor) 30%,
         transparent
       );
+      color: var(--SmartThemeBodyColor);
     }
   }
   .mes_reasoning {
+    font-size: 13px;
+    line-height: 1.6;
+    font-family: "Noto Sans";
+    font-style: italic;
     min-width: calc(100% + var(--mes-right-spacing));
     margin-left: 3px;
     margin-right: unset;
     padding: 0;
+    padding-right: 10px;
     padding-left: 12px;
-    border-radius: 0px;
-    color: color-mix(in srgb, var(--SmartThemeBodyColor) 75%, transparent);
-    border-left: 1.5px solid
-      color-mix(in srgb, var(--SmartThemeBodyColor) 75%, transparent);
+    padding-top: 5px;
+    padding-bottom: 8px;
+    color: color-mix(in srgb, var(--SmartThemeUnderlineColor) 75%, transparent);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-left: 2px solid
+      color-mix(in srgb, var(--SmartThemeUnderlineColor) 75%, transparent);
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
   }
 
   /* --- Chat Messages 聊天訊息 --- */
@@ -1112,7 +1126,7 @@ body.movingUI ::-webkit-scrollbar-thumb:vertical {
     }
     .mes_edit_buttons {
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 6px;
     }
     .timestamp {
       font-size: calc(var(--mainFontSize) * 0.7);
@@ -2171,7 +2185,7 @@ body.ripplestyle #chat {
       background: none !important;
       border: none !important;
       box-shadow: none !important;
-      padding-top: 20px;
+      padding-top: 15px;
       padding-left: 5px;
 
       .ch_name::after {
@@ -2485,12 +2499,13 @@ body.ripplestyle {
   .mesIDDisplay {
     background: var(--SmartThemeBorderColor) !important;
     width: fit-content;
-    padding: 0 8px;
-    border-radius: 8px;
+    padding: 0.5px 6px;
+    border-radius: 6px;
     justify-self: center;
     text-align: center;
-    margin-top: 5px !important;
+    margin-top: 7px !important;
     margin-bottom: 3px;
+    font-weight: 700;
   }
 }
 
@@ -3856,6 +3871,7 @@ body.swipeAllMessages .mes:not(.last_mes) .swipes-counter {
   opacity: 0.8 !important;
   margin-bottom: 20px !important;
   margin-right: var(--customMesPadding) !important;
+  color: var(--SmartThemeBodyColor);
 }
 body.echostyle.swipeAllMessages .mes:not(.last_mes) .swipes-counter {
   margin-right: 0 !important;
