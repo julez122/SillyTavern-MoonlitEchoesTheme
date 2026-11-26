@@ -2516,7 +2516,7 @@ body.ripplestyle {
   border-radius: 10px;
   border: 1.25px solid
     color-mix(in srgb, var(--SmartThemeBodyColor) 60%, transparent);
-  background-color: var(--SmartThemeBlurTintColor);
+  background-color: rgba(22, 22, 22, 0.5);
   opacity: 0.6;
   margin-bottom: 5px !important;
   transition: all 0.5s ease;
@@ -2591,6 +2591,7 @@ body.ripplestyle {
   ) !important;
   --progWidth: 1.25px;
   border: 0 !important;
+  outline: none !important;
 
   &::placeholder {
     font-size: 14px;
