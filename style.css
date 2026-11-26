@@ -463,22 +463,87 @@ input[type="range"] {
   background-color: var(--black70a);
 }
 @media screen and (max-width: 1000px) {
+  /* Fit large popups within the visible viewport and release space below the content. */
   .large_dialogue_popup {
     top: 0px;
     left: 0px;
     box-sizing: border-box;
     max-width: 100vw !important;
-    max-height: 100vh !important;
-    height: 100vh !important;
-    padding: 0px 10px;
+    max-height: 95dvh !important;
+    height: 95dvh !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.8em 0.5em !important;
+    padding: 0 0.5em 4px !important;
     border: 0 !important;
     border-radius: 0 !important;
+
+    /* Keep a capped native full-screen dialog flush with the top of the viewport. */
+    &:where(dialog.popup:not(:has(.img_enlarged.zoomed))) {
+      margin-block-start: 0;
+
+      /* Put display-only popups' close control inside the visible dialog bounds. */
+      > .popup-button-close {
+        inset-block-start: 4px;
+        inset-inline-end: 4px;
+      }
+    }
+
+    /* Preserve the image viewer's existing padding while the image is zoomed. */
+    &:where(:has(.img_enlarged.zoomed)) {
+      padding-block: 1.8em !important;
+    }
   }
 
+  /* Cap the native dialog without overriding tighter limits set by an individual layout. */
+  .popup:where(dialog:has(> .popup-body):not(:has(.img_enlarged.zoomed, #loader.splash-screen))) {
+    min-height: 0;
+    max-height: 95dvh;
+
+    /* Apply the cap when a footerless layout supplies a taller maximum of its own. */
+    &:not(:has(> .popup-body > .popup-controls > :not([hidden], .displayNone, [style*="display: none"], [style*="display:none"]))),
+    &:has(> .popup-body > .popup-controls:is([hidden], .displayNone, [style*="display: none"], [style*="display:none"])) {
+      max-height: 95dvh;
+    }
+
+    /* Make the content flex item take the space released by the shorter footer. */
+    > .popup-body > .popup-content {
+      min-height: 0;
+      margin-block-end: 0;
+    }
+
+    /* Remove the footer box when the native popup has hidden every button. */
+    > .popup-body > .popup-controls:not(:has(> :not([hidden], .displayNone, [style*="display: none"], [style*="display:none"]))) {
+      display: none;
+    }
+  }
+
+  /* Keep both native popup footers compact and stationary beneath their scrollers. */
+  dialog.popup > .popup-body > .popup-controls,
+  #dialogue_popup_controls {
+    flex: 0 0 auto;
+    margin-block: 4px 0;
+    padding-block: 3px;
+
+    /* Preserve button dimensions while removing each control's vertical margins. */
+    > * {
+      margin-block: 0;
+    }
+  }
+
+  /* Align the legacy full-screen popup with the same top edge. */
+  #dialogue_popup.large_dialogue_popup {
+    top: 0;
+    transform: none;
+  }
+
+  /* Reclaim bottom padding inside the older callPopup layout as well. */
+  #dialogue_popup_holder {
+    min-height: 0;
+    padding-block-end: 4px;
+  }
+
+  /* Preserve Safari's viewport fallback for the popup body. */
   body.safari .popup .popup-body {
     max-height: 90vh;
     max-height: 95dvh;
