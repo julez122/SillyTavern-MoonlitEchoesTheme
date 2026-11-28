@@ -485,6 +485,40 @@ input[type="range"] {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  /* Let a large popup's inner body use the visible viewport within its existing outer dialog. */
+  dialog.popup.large_dialogue_popup > .popup-body {
+    max-height: 100dvh;
+  }
+
+  /* Release theme padding while retaining the full-screen dialog's existing height and positioning. */
+  dialog.popup.large_dialogue_popup {
+    padding-block: 0 !important;
+  }
+
+  /* Give the content the space previously reserved by its bottom margin. */
+  dialog.popup > .popup-body > .popup-content {
+    margin-bottom: 0;
+  }
+
+  /* Keep the footer at its intrinsic height with a compact gap above its controls. */
+  dialog.popup > .popup-body > .popup-controls {
+    flex-shrink: 0;
+    margin-top: 4px;
+    padding-block: 0;
+  }
+
+  /* Remove the extra vertical margins around individual footer buttons. */
+  dialog.popup > .popup-body > .popup-controls > .menu_button {
+    margin-block: 0;
+  }
+
+  /* Remove the empty footer when every native and custom control is hidden. */
+  dialog.popup > .popup-body > .popup-controls:not(:has(> :not([hidden], .displayNone, [style*="display: none"], [style*="display:none"]))) {
+    display: none;
+  }
+}
+
 .scenario_override {
   .standoutHeader,
   .title_restorable {
