@@ -122,35 +122,6 @@ export function initExtensionUI() {
 }
 
 /**
- * Adds a button to the Extensions dropdown menu for Moonlit Echoes Theme
- * This function creates a menu item in SillyTavern's Extensions dropdown
- * that opens the theme settings popup when clicked.
- */
-function addExtensionMenuButton() {
-    // Select the Extensions dropdown menu
-    let $extensions_menu = $('#extensionsMenu');
-    if (!$extensions_menu.length) {
-        return;
-    }
-
-    // Create button element with moon icon and theme name
-    let $button = $(`
-    <div class="list-group-item flex-container flexGap5 interactable" title="Open Moonlit Echoes Theme Settings" data-i18n="[title]Open Moonlit Echoes Theme Settings" tabindex="0">
-        <i class="fa-solid fa-moon"></i>
-        <span>Moonlit Echoes</span>
-    </div>
-    `);
-
-    // Append to extensions menu
-    $button.appendTo($extensions_menu);
-
-    // Set click handler to toggle the settings popup
-    $button.click(() => {
-        toggleSettingsPopout();
-    });
-}
-
-/**
  * Add thumbnail tip
  * Add thumbnail setting tip in the settings panel
  */
